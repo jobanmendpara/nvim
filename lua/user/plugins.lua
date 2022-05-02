@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use("lewis6991/impatient.nvim")
   use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
+  use("ur4ltz/surround.nvim")
 
   -- Telescope 
   use("nvim-telescope/telescope.nvim")
