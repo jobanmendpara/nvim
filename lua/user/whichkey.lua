@@ -83,9 +83,17 @@ local mappings = {
   ["Q"] = { "<cmd>qa<cr>", "Quit"},
   --["c"] = { "<cmd>bp | sp | bn | bd<cr>", "Close Buffer"},
   ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer"},
-  ["h"] = { "<cmd>noh<cr>", "No Highlight"},
+  ["n"] = { "<cmd>noh<cr>", "No Highlight"},
   ["f"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files"},
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text"},
+  h = {
+    name = "Hop",
+    w = {"<cmd>HopWord<cr>" , "HopWord"},
+    l = {"<cmd>HopLine<cr>" , "HopLine"},
+    c = {"<cmd>HopChar1<cr>" , "HopChar1"},
+    C = {"<cmd>HopChar2<cr>" , "HopChar2"},
+    p = {"<cmd>HopPattern<cr>" , "HopPattern"},
+  },
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>" , "Compile" },
