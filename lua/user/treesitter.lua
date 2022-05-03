@@ -20,6 +20,9 @@ configs.setup {
     extended_mode = true,
     max_file_lines = nil,
   },
+  autotag = {
+    enable = true,
+  },
   index = { enable = true, disable = { "yaml" } },
   context_commentstring = {
     enable = true,
