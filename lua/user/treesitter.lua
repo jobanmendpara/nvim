@@ -28,4 +28,17 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
+  renderer = {
+    indent_markers = {
+      enable = false,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
+    icons = {
+      webdev_colors = true,
+    },
+  },
 }

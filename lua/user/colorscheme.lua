@@ -1,8 +1,10 @@
 vim.cmd [[
 try
-	colorscheme tokyonight 
+  let g:sonokai_style = 'andromeda'
+  let g:sonokai_better_performance = 1
+	colorscheme sonokai
 	catch /^Vim\%((\a\+)\)\ =:E185/
-		colorscheme default
+		colorscheme tokyonight
 		set background = dark
 	endtry
 ]]

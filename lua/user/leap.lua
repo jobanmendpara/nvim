@@ -4,3 +4,8 @@ if not status_ok then
 end
 
 leap.set_default_keymaps()
+function leap_bidirectional()
+  leap.leap {
+    ['target-windows'] = { vim.fn.getwininfo(vim.fn.win_getid())[1] }
+  }
+end
