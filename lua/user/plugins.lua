@@ -70,8 +70,9 @@ return packer.startup(function(use)
   use("ur4ltz/surround.nvim")
   use("ggandor/leap.nvim")
   use("Pocco81/AutoSave.nvim")
+  use("McAuleyPenney/tidy.nvim")
 
-  -- Telescope 
+  -- Telescope
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-media-files.nvim")
 
