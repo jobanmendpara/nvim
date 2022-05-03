@@ -71,6 +71,7 @@ return packer.startup(function(use)
   use("ggandor/leap.nvim")
   use("Pocco81/AutoSave.nvim")
   use("McAuleyPenney/tidy.nvim")
+  use("tanvirtin/vgit.nvim")
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
