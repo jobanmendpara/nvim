@@ -15,6 +15,11 @@ configs.setup {
     disable = { "" }, -- list of languages that will be disabled
     additional_vim_regex_highlighting = true,
   },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  },
   index = { enable = true, disable = { "yaml" } },
   context_commentstring = {
     enable = true,
