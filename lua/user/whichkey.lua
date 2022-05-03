@@ -77,7 +77,7 @@ local opts = {
 
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Dashboard"},
-  ["e"] = { "<cmd>NeoTreeRevealToggle<cr>", "Explorer"},
+  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer"},
   ["w"] = { "<cmd>w!<cr>", "Save"},
   ["W"] = { "<cmd>wa!<cr>", "Save All"},
   ["q"] = { "<cmd>q<cr>", "Quit"},

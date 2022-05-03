@@ -68,10 +68,12 @@ neo_tree.setup({
         nowait = true,
       },
       mappings = {
+        ["<space>"] = "<cmd>WhichKey<cr>",
         ["l"] = {
             "toggle_node",
             nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
         },
+        ["l"] = "open",
         ["<2-LeftMouse>"] = "open",
         ["<cr>"] = "open",
         ["S"] = "open_split",

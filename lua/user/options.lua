@@ -1,5 +1,5 @@
 local options = {
-	laststatus = 1, -- sets global status
+	laststatus = 3, -- sets global status
 	backup = false, -- creates backup file
 	clipboard = "unnamedplus", -- allows nvim to access the system clipboard
 	cmdheight = 1, -- more space in the nvim command line for displaying messages
