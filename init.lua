@@ -6,10 +6,11 @@ require "user.keymaps"
 require "user.alpha"
 require "user.telescope"
 require "user.project"
-require "user.whichkey"
+require "user.whichkey" -- TODO: Re-config to account for more git and lsp actions
 require "user.treesitter"
 require "user.bufferline"
-require "user.nvim-tree"
+-- require "user.nvim-tree" -- TODO: switch to NeoTree?
+require "user.neo-tree"
 require "user.lualine"
 require "user.cmp"
 require "user.autopairs"
