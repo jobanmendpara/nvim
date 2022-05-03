@@ -14,18 +14,18 @@ null_ls.setup({
 	sources = {
     diagnostics.eslint_d,
     codeActions.eslint_d,
-		formatting.prettier.with({
-			extra_args = {
-				"--single-quote",
-				"--jsx-single-quote",
-			},
-		}),
-		formatting.black.with({
-			extra_args = {
-				"--fast",
-			},
-		}),
-		formatting.stylua,
+	formatting.prettier.with({
+		extra_args = {
+			"--single-quote",
+			"--jsx-single-quote",
+		},
+	}),
+	formatting.black.with({
+		extra_args = {
+			"--fast",
+		},
+	}),
+	formatting.stylua,
 	},
-  on_attach = on_attach
+	on_attach = on_attach
 })

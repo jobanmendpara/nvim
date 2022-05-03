@@ -79,10 +79,9 @@ local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Dashboard"},
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer"},
   ["w"] = { "<cmd>w!<cr>", "Save"},
+  ["W"] = { "<cmd>wa!<cr>", "Save All"},
   ["q"] = { "<cmd>q<cr>", "Quit"},
-  ["Q"] = { "<cmd>qa<cr>", "Quit"},
-  --["c"] = { "<cmd>bp | sp | bn | bd<cr>", "Close Buffer"},
-  ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer"},
+  ["Q"] = { "<cmd>ZZ<cr>", "Quit Neovim"},
   ["n"] = { "<cmd>noh<cr>", "No Highlight"},
   ["f"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files"},
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text"},
@@ -103,6 +102,7 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>" , "Update" },
   },
   g = {
+    name = "Git",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout Branch" },
   },
   l = {
