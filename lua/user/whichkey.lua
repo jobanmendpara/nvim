@@ -81,7 +81,7 @@ local mappings = {
   ["w"] = { "<cmd>w!<cr>", "Save"},
   ["W"] = { "<cmd>wa!<cr>", "Save All"},
   ["q"] = { "<cmd>q<cr>", "Quit"},
-  ["Q"] = { "<cmd>wqa!<cr>", "Quit Neovim"},
+  ["Q"] = { "<cmd>qa!<cr>", "Quit Neovim"},
   ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer"},
   ["n"] = { "<cmd>noh<cr>", "No Highlight"},
   ["f"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files"},
