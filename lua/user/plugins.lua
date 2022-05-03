@@ -73,6 +73,7 @@ return packer.startup(function(use)
   use("McAuleyPenney/tidy.nvim")
   use("tanvirtin/vgit.nvim")
   use("rmagatti/auto-session")
+  use("folke/trouble.nvim")
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
@@ -97,7 +98,6 @@ return packer.startup(function(use)
   use("tamago324/nlsp-settings.nvim")
   use("jose-elias-alvarez/null-ls.nvim")
   use("jose-elias-alvarez/nvim-lsp-ts-utils")
-  use("glepnir/lspsaga.nvim")
 
   -- Color Schemes
   use("folke/tokyonight.nvim")
