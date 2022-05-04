@@ -2,10 +2,14 @@ return {
   ui = {
     Bug = "",
     Trace = "",
+    Check = "",
+    Fire = "",
+    Dashboard = "",
+    Note = "",
   },
   diagnostics = {
-    Error = "𥉉",
-    Warning = "",
-    Information = "",
+    Error = "",
+    Warning = "",
+    Information = "",
   }
 }
