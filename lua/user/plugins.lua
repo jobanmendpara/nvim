@@ -77,6 +77,8 @@ return packer.startup(function(use)
   use("TimUntersberger/neogit")
   use("rcarriga/nvim-notify")
   use("karb94/neoscroll.nvim")
+  use("nacro90/numb.nvim")
+  use("folke/todo-comments.nvim")
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
