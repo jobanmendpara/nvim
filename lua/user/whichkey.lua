@@ -105,6 +105,8 @@ local mappings = {
   g = {
     name = "Git",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout Branch" },
+    s = {"<cmd>Telescope git_status<cr>", "Status"},
+    c = {"<cmd>Telescope git_commits<cr>", "Commits"},
   },
   l = {
     name = "LSP",
@@ -122,7 +124,8 @@ local mappings = {
   },
   s = {
     name = "Search",
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout Branch" },
+    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
+    p = { "<cmd>Telescope projects<cr>", "Projects" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     M = { "<cmd>Telescope man_pages<cr>", "Manual Pages" },
@@ -130,13 +133,11 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+    t = { "<cmd>Telescope treesitter<cr>", "Treesitter" },
   },
   t = {
     name = "Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
