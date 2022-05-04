@@ -6,7 +6,7 @@ end
 local setup = {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
-    registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+    registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
     spelling = {
       enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestings
       suggestions = 20, -- how many suggestions should be shown in the list?
@@ -75,38 +75,44 @@ local opts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
-local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Dashboard"},
-  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer"},
-  ["w"] = { "<cmd>w!<cr>", "Save"},
-  ["W"] = { "<cmd>wa!<cr>", "Save All"},
-  ["q"] = { "<cmd>q<cr>", "Quit"},
-  ["Q"] = { "<cmd>qa!<cr>", "Quit Neovim"},
-  ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer"},
-  ["n"] = { "<cmd>noh<cr>", "No Highlight"},
-  ["f"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files"},
-  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text"},
-  h = {
-    name = "Hop",
-    w = {"<cmd>HopWord<cr>" , "HopWord"},
-    l = {"<cmd>HopLine<cr>" , "HopLine"},
-    c = {"<cmd>HopChar1<cr>" , "HopChar1"},
-    C = {"<cmd>HopChar2<cr>" , "HopChar2"},
-    p = {"<cmd>HopPattern<cr>" , "HopPattern"},
+local spaceMappings = {
+  ["1"] = { "<cmd>Alpha<cr>", "Dashboard" },
+  ["-"] = { "<cmd>qa!<cr>", "Exit Neovim" },
+  f = {
+    name = "Files",
+    ["s"] = { "<cmd>w!<cr>", "Save" },
+    ["S"] = { "<cmd>wa!<cr>", "Save All" },
+    ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer"},
+    ["h"] = { "<cmd>noh<cr>", "No Highlight" },
   },
   p = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>" , "Compile" },
-    i = { "<cmd>PackerInstall<cr>" , "Install" },
-    s = { "<cmd>PackerSync<cr>" , "Sync" },
-    S = { "<cmd>PackerStatus<cr>" , "Status" },
-    u = { "<cmd>PackerUpdate<cr>" , "Update" },
+    name = "Project",
+    ["t"] = { "<cmd>NvimTreeToggle<cr>", "Toggle Explorer" },
+    ["f"] = { "<cmd>NvimTreeFocus<cr>", "Focus Explorer" },
+    ["F"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files" },
+    ["T"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   },
-  g = {
-    name = "Git",
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout Branch" },
-    s = {"<cmd>Telescope git_status<cr>", "Status"},
-    c = {"<cmd>Telescope git_commits<cr>", "Commits"},
+  w = {
+    name = "Window",
+    ["q"] = { "<cmd>q<cr>", "Quit" },
+    ["h"] = { "<cmd>split<cr>", "HSplit" },
+    ["v"] = { "<cmd>vsplit<cr>", "VSplit" },
+  },
+  m = {
+    name = "Motion",
+    w = { "<cmd>HopWord<cr>", "HopWord" },
+    l = { "<cmd>HopLine<cr>", "HopLine" },
+    c = { "<cmd>HopChar1<cr>", "HopChar1" },
+    C = { "<cmd>HopChar2<cr>", "HopChar2" },
+    p = { "<cmd>HopPattern<cr>", "HopPattern" },
+  },
+  P = {
+    name = "Packer",
+    c = { "<cmd>PackerCompile<cr>", "Compile" },
+    i = { "<cmd>PackerInstall<cr>", "Install" },
+    s = { "<cmd>PackerSync<cr>", "Sync" },
+    S = { "<cmd>PackerStatus<cr>", "Status" },
+    u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
   l = {
     name = "LSP",
@@ -120,7 +126,14 @@ local mappings = {
     },
     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    i = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+  },
+  G = {
+    name = "Git",
+    b = { "<cmd>Telescope git_branches<cr>", "Checkout Branch" },
+    e = { "<cmd>Telescope git_status<cr>", "Status" },
+    c = { "<cmd>Telescope git_commits<cr>", "Commits" },
+    n = { "<cmd>Neogit<cr>", "Neogit" },
   },
   s = {
     name = "Search",
@@ -145,4 +158,4 @@ local mappings = {
 }
 
 which_key.setup(setup)
-which_key.register(mappings, opts)
+which_key.register(spaceMappings, opts)

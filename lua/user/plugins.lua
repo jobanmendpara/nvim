@@ -4,17 +4,17 @@ local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
 if fn.empty(fn.glob(install_path)) > 0 then
-	PACKER_BOOTSTRAP = fn.system({
-		"git",
-		"clone",
-		"--depth",
-		"1",
-		"https://github.com/wbthomason/packer.nvim",
-		install_path,
-	})
+  PACKER_BOOTSTRAP = fn.system({
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  })
 
-	print("Installing Packer. Please restart NeoVim.")
-	vim.cmd([[packadd packer.nvim]])
+  print("Installing Packer. Please restart NeoVim.")
+  vim.cmd([[packadd packer.nvim]])
 end
 
 vim.cmd([[
@@ -28,23 +28,23 @@ vim.cmd([[
 local status_ok, packer = pcall(require, "packer")
 
 if not status_ok then
-	vim.notify("The protected call for Packer failed.")
-	return
+  vim.notify("The protected call for Packer failed.")
+  return
 end
 
 packer.init({
-	display = {
-		open_fn = function()
-			return require("packer.util").float({ border = "rounded" })
-		end,
-	},
+  display = {
+    open_fn = function()
+      return require("packer.util").float({ border = "rounded" })
+    end,
+  },
 })
 
 -- Install packages here
 return packer.startup(function(use)
-	-- Packer
-	use("wbthomason/packer.nvim")
-	----------------------------
+  -- Packer
+  use("wbthomason/packer.nvim")
+  ----------------------------
   -- My Plugins
   ----------------------------
   use("lewis6991/gitsigns.nvim")
@@ -72,9 +72,10 @@ return packer.startup(function(use)
   use("ggandor/leap.nvim")
   use("Pocco81/AutoSave.nvim")
   use("McAuleyPenney/tidy.nvim")
-  use("tanvirtin/vgit.nvim")
   use("rmagatti/auto-session")
   use("folke/trouble.nvim")
+  use("TimUntersberger/neogit")
+  use("rcarriga/nvim-notify")
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
@@ -106,7 +107,7 @@ return packer.startup(function(use)
   use("overcache/NeoSolarized")
   use("sainnhe/sonokai")
 
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
 end)
