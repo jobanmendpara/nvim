@@ -79,6 +79,7 @@ return packer.startup(function(use)
   use("karb94/neoscroll.nvim")
   use("nacro90/numb.nvim")
   use("folke/todo-comments.nvim")
+  use("andweeb/presence.nvim")
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")

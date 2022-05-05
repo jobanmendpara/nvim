@@ -84,6 +84,7 @@ local spaceMappings = {
     ["S"] = { "<cmd>wa!<cr>", "Save All" },
     ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer"},
     ["h"] = { "<cmd>noh<cr>", "No Highlight" },
+    ["f"] = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
   },
   p = {
     name = "Project",
@@ -91,6 +92,8 @@ local spaceMappings = {
     ["f"] = { "<cmd>NvimTreeFocus<cr>", "Focus Explorer" },
     ["F"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files" },
     ["T"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+    ["n"] = { "<cmd>TodoLocList<cr>", "Local Notes" },
+    ["e"] = { "<cmd>TroubleToggle<cr>", "Trouble" },
   },
   w = {
     name = "Window",
@@ -147,6 +150,7 @@ local spaceMappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     t = { "<cmd>Telescope treesitter<cr>", "Treesitter" },
+    N = { "<cmd>TodoTelescope<cr>", "Notes" },
   },
   t = {
     name = "Terminal",
