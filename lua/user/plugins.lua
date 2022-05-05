@@ -80,6 +80,9 @@ return packer.startup(function(use)
   use("nacro90/numb.nvim")
   use("folke/todo-comments.nvim")
   use("andweeb/presence.nvim")
+  use("sunjon/Shade.nvim")
+  use("folke/twilight.nvim")
+  use("norcalli/nvim-colorizer.lua")
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
