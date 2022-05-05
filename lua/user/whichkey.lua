@@ -88,12 +88,12 @@ local spaceMappings = {
   },
   p = {
     name = "Project",
-    ["t"] = { "<cmd>NvimTreeToggle<cr>", "Toggle Explorer" },
+    ["e"] = { "<cmd>NvimTreeToggle<cr>", "Toggle Explorer" },
     ["f"] = { "<cmd>NvimTreeFocus<cr>", "Focus Explorer" },
     ["F"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files" },
     ["T"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["n"] = { "<cmd>TodoLocList<cr>", "Local Notes" },
-    ["e"] = { "<cmd>TroubleToggle<cr>", "Trouble" },
+    ["t"] = { "<cmd>TroubleToggle<cr>", "Trouble" },
   },
   w = {
     name = "Window",
@@ -117,7 +117,7 @@ local spaceMappings = {
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
-  l = {
+  L = {
     name = "LSP",
     d = {
       "<cmd>Telescope lsp_document_diagnostics<cr>",
@@ -127,7 +127,7 @@ local spaceMappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+    r = { "<cmd>LspRestart<cr>", "Restart" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
   },
