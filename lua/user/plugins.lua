@@ -81,6 +81,7 @@ return packer.startup(function(use)
   use("folke/todo-comments.nvim")
   use("andweeb/presence.nvim")
   use("sunjon/Shade.nvim")
+  use("winston0410/range-highlight.nvim")
   use("folke/twilight.nvim")
   use("norcalli/nvim-colorizer.lua")
 
@@ -114,6 +115,10 @@ return packer.startup(function(use)
   use("projekt0n/github-nvim-theme")
   use("overcache/NeoSolarized")
   use("sainnhe/sonokai")
+  use("sainnhe/gruvbox-material")
+  use("sainnhe/everforest")
+  use("sainnhe/edge")
+  use("rmehri01/onenord.nvim")
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
