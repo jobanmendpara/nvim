@@ -121,6 +121,7 @@ return packer.startup(function(use)
   use("sainnhe/edge")
   use("rmehri01/onenord.nvim")
   use("ChristianChiarulli/nvcode-color-schemes.vim")
+  use("rose-pine/neovim")
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
