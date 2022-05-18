@@ -1,8 +1,8 @@
 vim.cmd [[
 try
-	colorscheme everforest
+  set background=light
+	colorscheme sonokai
 	catch /^Vim\%((\a\+)\)\ =:E185/
 		colorscheme tokyonight
-		set background = dark
 	endtry
 ]]

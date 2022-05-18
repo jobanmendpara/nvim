@@ -89,8 +89,7 @@ local spaceMappings = {
   p = {
     name = "Project",
     ["e"] = { "<cmd>NvimTreeToggle<cr>", "Toggle Explorer" },
-    ["f"] = { "<cmd>NvimTreeFocus<cr>", "Focus Explorer" },
-    ["F"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files" },
+    ["f"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files" },
     ["T"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["n"] = { "<cmd>TodoLocList<cr>", "Local Notes" },
     ["t"] = { "<cmd>TroubleToggle<cr>", "Trouble" },
