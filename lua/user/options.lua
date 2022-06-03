@@ -32,8 +32,8 @@ local options = {
 	numberwidth = 4, -- set number column width to 2 (default 4)
 	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
 	wrap = false, -- display lines as one long line
-	scrolloff = 8, -- copied from chis@machine
-	sidescrolloff = 8, -- copied from chis@machine
+	scrolloff = 5,
+  sidescrolloff = 8,
 }
 
 vim.opt.shortmess:append "c"
