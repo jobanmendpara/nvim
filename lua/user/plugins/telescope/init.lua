@@ -5,11 +5,12 @@ end
 
 telescope.load_extension("media_files")
 local actions = require "telescope.actions"
+local icons = require('user.misc.icons')
 
 telescope.setup({
   defaults = {
-    prompt_prefix = ' ',
-    selection_caret = ' ',
+    prompt_prefix = icons.telescope,
+    selection_caret = icons.selection_caret,
     path_display = { 'smart' },
   },
   extensions = {
@@ -25,4 +26,3 @@ telescope.setup({
 })
 
 telescope.load_extension('fzf');
-require('user.plugins.telescope.keymaps')

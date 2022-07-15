@@ -10,7 +10,7 @@ bufferline.setup({
         close_icon = '',
         close_command = 'bdelete! %d',
         diagnostics = 'nvim_lsp',
-        diagnostics_indicator = function(count, level)
+        diagnostics_indicator = function(count, level, diagnostics_dict, context)
             return '(' .. count .. ')'
         end,
         enforce_regular_tabs = true,

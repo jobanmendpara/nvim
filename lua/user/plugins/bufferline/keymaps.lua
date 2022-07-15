@@ -1,4 +1,4 @@
-local map = require('user.utils').map
+local keymap = vim.keymap.set
 
-map('n', '<leader>bpb', ':BufferLinePick<cr>')
-map('n', '<leader>bpc', ':BufferLinePickClose<cr>')
+keymap('n', '<leader>bpb', ':BufferLinePick<cr>')
+keymap('n', '<leader>bpc', ':BufferLinePickClose<cr>')

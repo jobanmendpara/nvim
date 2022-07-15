@@ -38,7 +38,9 @@ packer.init({
 
 -- Install packages here
 return packer.startup(function(use)
+    ----------------------------
     -- Packer
+    ----------------------------
     use("wbthomason/packer.nvim")
 
     ----------------------------
@@ -51,41 +53,31 @@ return packer.startup(function(use)
     ----------------------------
     -- My Plugins
     ----------------------------
-    use('kyazdani42/nvim-tree.lua')
-    use('akinsho/bufferline.nvim')
-    use('nvim-lualine/lualine.nvim')
+    use("lewis6991/impatient.nvim")
+    use("Shatur/neovim-session-manager")
+    use("folke/which-key.nvim")
+    use("kyazdani42/nvim-tree.lua")
+    use("akinsho/bufferline.nvim")
+    use("nvim-lualine/lualine.nvim")
     use("karb94/neoscroll.nvim")
     use("goolord/alpha-nvim")
-    use({
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
-    })
-    use('windwp/nvim-autopairs')
-    use('windwp/nvim-ts-autotag')
-    use("p00f/nvim-ts-rainbow")
-    -- use("lewis6991/gitsigns.nvim")
-    -- use("ahmedkhalf/project.nvim")
-    -- use("folke/which-key.nvim")
-    -- use("lukas-reineke/indent-blankline.nvim")
-    -- use("phaazon/hop.nvim")
-    -- use("akinsho/toggleterm.nvim")
-    -- use("yamatsum/nvim-cursorline")
-    -- use("antoinemadec/FixCursorHold.nvim")
-    -- use("lewis6991/impatient.nvim")
-    -- use("numToStr/Comment.nvim")
-    -- use("JoosepAlviste/nvim-ts-context-commentstring")
-    -- use("ur4ltz/surround.nvim")
-    -- use("ggandor/leap.nvim")
-    -- use("Pocco81/AutoSave.nvim")
-    -- use("McAuleyPenney/tidy.nvim")
-    -- use("Shatur/neovim-session-manager")
-    -- use("folke/trouble.nvim")
+    use("akinsho/toggleterm.nvim")
+    use("ahmedkhalf/project.nvim")
+    use("numToStr/Comment.nvim")
+    use("JoosepAlviste/nvim-ts-context-commentstring")
+    use("phaazon/hop.nvim")
+    use("unblevable/quick-scope")
+    use("lewis6991/gitsigns.nvim")
+    use("folke/trouble.nvim")
+    use("yamatsum/nvim-cursorline")
+    use("lukas-reineke/indent-blankline.nvim")
+    use("McAuleyPenney/tidy.nvim")
+    use("Pocco81/AutoSave.nvim")
+    use("sunjon/Shade.nvim")
+    use("ur4ltz/surround.nvim")
+    use("folke/todo-comments.nvim")
     -- use("rcarriga/nvim-notify")
-    -- use("nacro90/numb.nvim")
-    -- use("folke/todo-comments.nvim")
     -- use("andweeb/presence.nvim")
-    -- use("sunjon/Shade.nvim")
-    -- use("folke/twilight.nvim")
     -- use("norcalli/nvim-colorizer.lua")
 
     -- Telescope
@@ -97,23 +89,32 @@ return packer.startup(function(use)
       run = 'make'
     })
 
+    -- Treesitter
+    use({
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+    })
+    use('windwp/nvim-autopairs')
+    use('windwp/nvim-ts-autotag')
+    use("p00f/nvim-ts-rainbow")
+
     -- cmp plugins
-    -- use("hrsh7th/nvim-cmp")
-    -- use("hrsh7th/cmp-buffer")
-    -- use("hrsh7th/cmp-path")
-    -- use("hrsh7th/cmp-cmdline")
-    -- use("saadparwaiz1/cmp_luasnip")
-    -- use("hrsh7th/cmp-nvim-lua")
-    -- use("hrsh7th/cmp-nvim-lsp")
-    -- use("lukas-reineke/cmp-rg")
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-nvim-lua")
+    use("saadparwaiz1/cmp_luasnip")
+    use("lukas-reineke/cmp-rg")
 
     -- snippets
-    -- use("L3MON4D3/LuaSnip")
+    use("L3MON4D3/LuaSnip")
     -- use("rafamadriz/friendly-snippets")
 
     -- LSP
-    -- use("neovim/nvim-lspconfig")
-    -- use("williamboman/nvim-lsp-installer")
+    use("neovim/nvim-lspconfig")
+    use("williamboman/nvim-lsp-installer")
     -- use("tamago324/nlsp-settings.nvim")
     -- use("jose-elias-alvarez/null-ls.nvim")
     -- use("jose-elias-alvarez/nvim-lsp-ts-utils")

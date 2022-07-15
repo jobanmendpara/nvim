@@ -5,12 +5,14 @@ return {
     arrow_right_filled = '', -- e0b0
     arrow_left = '', -- e0b3
     arrow_right = '', -- e0b1
+    breadcrumb = '»',
     ghost = '',
     evil = '  ',
-    mellow = '🫠',
     star = '★',
     scorpio = '♏︎',
+    selection_caret = ' ',
     rocket = '🚀',
+    telescope = ' ',
     warn = '',
     warn_lg = ' ',
     info = '',
@@ -85,3 +87,4 @@ return {
         TypeParameter = ''
     }
 }
+--   פּ ﯟ   some other good icons
