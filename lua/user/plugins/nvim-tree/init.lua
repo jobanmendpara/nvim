@@ -23,7 +23,7 @@ nvim_tree.setup({
     open_on_setup_file = true,
     open_on_tab = false,
     sort_by = 'name',
-    update_cwd = false,
+    update_cwd = true,
     view = {
         hide_root_folder = false,
         height = 30,
@@ -44,12 +44,13 @@ nvim_tree.setup({
         highlight_git = true,
         full_name = true,
         indent_markers = {
-            enable = true,
+            enable = false,
             icons = {
                 corner = '└ ',
                 edge = '│ ',
-                none = '  '
-            }
+                item = '│ ',
+                none = ' ',
+            },
         },
         icons = {
             webdev_colors = true,
@@ -67,7 +68,7 @@ nvim_tree.setup({
     },
     update_focused_file = {
         enable = true,
-        update_cwd = false,
+        update_cwd = true,
         ignore_list = {}
     },
     ignore_ft_on_setup = {'alpha'},

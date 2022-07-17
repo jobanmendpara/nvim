@@ -53,6 +53,7 @@ return packer.startup(function(use)
     ----------------------------
     -- My Plugins
     ----------------------------
+    use("sewdohe/nvim-adapt")
     use("lewis6991/impatient.nvim")
     use("Shatur/neovim-session-manager")
     use("folke/which-key.nvim")
@@ -73,7 +74,6 @@ return packer.startup(function(use)
     use("lukas-reineke/indent-blankline.nvim")
     use("McAuleyPenney/tidy.nvim")
     use("Pocco81/AutoSave.nvim")
-    use("sunjon/Shade.nvim")
     use("ur4ltz/surround.nvim")
     use("folke/todo-comments.nvim")
     -- use("rcarriga/nvim-notify")
