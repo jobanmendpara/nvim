@@ -18,7 +18,7 @@ treesitter.setup({
         additional_vim_regex_highlighting = true
     },
     indent = {
-        enable = false
+        enable = false,
     },
     index = {
         enable = true

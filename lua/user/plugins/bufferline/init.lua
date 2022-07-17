@@ -40,5 +40,3 @@ bufferline.setup({
         persist_buffer_sort = true
     }
 })
-
-require('user.plugins.bufferline.keymaps')

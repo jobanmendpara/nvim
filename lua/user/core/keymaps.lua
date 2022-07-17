@@ -81,7 +81,7 @@ end)
 
 -- Save Buffer
 keymap('n', '<leader>w', '<cmd>w<cr>')
--- Quit Buffer/Window?
+-- Quit Window?
 keymap('n', '<leader>q', '<cmd>q<cr>')
 -- Quit All
 keymap('n', '<leader>-', '<cmd>qa<cr>')

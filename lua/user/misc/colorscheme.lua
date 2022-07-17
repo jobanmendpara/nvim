@@ -1,6 +1,6 @@
 vim.cmd [[
 try
-	colorscheme snazzy
+	colorscheme rose-pine
 	catch /^Vim\%((\a\+)\)\ =:E185/
 		colorscheme tokyonight
 	endtry

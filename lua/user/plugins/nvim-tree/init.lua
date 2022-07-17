@@ -88,12 +88,12 @@ nvim_tree.setup({
     },
     filters = {
         dotfiles = false,
-        custom = {},
+        custom = {'.git'},
         exclude = {}
     },
     git = {
         enable = true,
-        ignore = true,
+        ignore = false,
         timeout = 400
     },
     actions = {

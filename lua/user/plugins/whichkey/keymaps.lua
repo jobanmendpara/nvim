@@ -15,6 +15,12 @@ local opts = {
 
 local mappings = {
   space_mappings = {
+    ['b'] = {
+      name = 'Buffer',
+      c = {'<cmd>Bdelete!<cr>', 'Close Buffer'},
+      C = {'<cmd>BufferLinePickClose<cr>', 'Pick Close'},
+      p = {'<cmd>BufferLinePick<cr>', 'Pick'},
+    },
     ['f'] = {
       name = 'Find',
       b = {builtins.buffers, 'Buffers'},
