@@ -4,7 +4,6 @@ require('user.core.impatient')
 require('user.core.plugins')
 require('user.core.autocommands')
 require('user.misc.colorscheme')
-require('user.plugins.adapt');
 require('user.plugins.nvim-tree')
 require('user.plugins.bufferline')
 require('user.plugins.lualine')

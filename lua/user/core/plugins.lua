@@ -53,7 +53,7 @@ return packer.startup(function(use)
     ----------------------------
     -- My Plugins
     ----------------------------
-    use("sewdohe/nvim-adapt")
+    use('cormacrelf/dark-notify')
     use("lewis6991/impatient.nvim")
     use("Shatur/neovim-session-manager")
     use("folke/which-key.nvim")

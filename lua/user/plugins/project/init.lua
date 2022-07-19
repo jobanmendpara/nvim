@@ -6,9 +6,9 @@ end
 project.setup({
   active = true,
   on_config_done = nil,
-  manual_mode = true,
-  detection_methods = { 'lsp', 'pattern' },
-  patterns = { 'git' , 'package.json', 'Makefile'},
+  manual_mode = false,
+  detection_methods = { 'pattern' },
+  patterns = { '.git' , 'package.json', 'Makefile'},
   show_hidden = true,
   silent_chdir = true,
   ignore_lsp = {},
