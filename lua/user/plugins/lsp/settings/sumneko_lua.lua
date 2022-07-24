@@ -4,6 +4,7 @@ return {
       diagnostics = {
         globals = {'vim', 'use', 'require'}
       },
+      format = true,
       workspace = {
         library = {
           [vim.fn.expand '$VIMRUNTIME/lua'] = true,
