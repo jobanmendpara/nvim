@@ -12,7 +12,7 @@ which_key.setup({
     seperator = icons.git.renamed,
     group = '+',
   },
-  ignore_missing = false,
+  ignore_missing = true,
   mappings = mappings,
   triggers = 'auto',
   show_help = true,

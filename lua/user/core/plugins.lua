@@ -78,7 +78,7 @@ return packer.startup(function(use)
     use("ur4ltz/surround.nvim")
     use("folke/todo-comments.nvim")
     -- use("rcarriga/nvim-notify")
-    -- use("andweeb/presence.nvim")
+    use("andweeb/presence.nvim")
     -- use("norcalli/nvim-colorizer.lua")
 
     -- Telescope

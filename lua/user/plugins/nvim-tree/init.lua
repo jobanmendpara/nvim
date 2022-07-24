@@ -88,7 +88,7 @@ nvim_tree.setup({
     },
     filters = {
         dotfiles = false,
-        custom = {'.git'},
+        custom = {},
         exclude = {}
     },
     git = {

@@ -27,6 +27,6 @@ require('user.plugins.cursorline')
 require('user.plugins.autosave')
 require('user.plugins.surround')
 require('user.plugins.todo_comments')
+require("user.plugins.presence")
 -- require "user.notify"
--- require "user.presence"
 -- require "user.colorizer"
