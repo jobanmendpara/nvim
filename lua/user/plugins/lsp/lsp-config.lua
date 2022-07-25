@@ -10,7 +10,6 @@ lspconfig.sumneko_lua.setup({
   capabilities = handlers.capabilities,
   settings = settings.sumneko_lua,
 })
-lspconfig.tsserver.setup({ capabilities = handlers.capabilities })
 lspconfig.eslint.setup({ capabilities = handlers.capabilities })
-lspconfig.vls.setup({ capabilities = handlers.capabilities })
+lspconfig.tsserver.setup({ capabilities = handlers.capabilities })
 lspconfig.volar.setup({ capabilities = handlers.capabilities })

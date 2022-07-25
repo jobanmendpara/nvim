@@ -115,7 +115,8 @@ return packer.startup(function(use)
 
     -- LSP
     use("neovim/nvim-lspconfig")
-    use("williamboman/nvim-lsp-installer")
+    use("williamboman/mason.nvim")
+    use("williamboman/mason-lspconfig.nvim")
     -- use("tamago324/nlsp-settings.nvim")
     -- use("jose-elias-alvarez/null-ls.nvim")
     -- use("jose-elias-alvarez/nvim-lsp-ts-utils")
