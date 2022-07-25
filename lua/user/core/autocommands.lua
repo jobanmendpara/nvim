@@ -6,6 +6,5 @@ vim.cmd([[
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd FileType qf set nobuflisted
     autocmd VimEnter * :ASToggle
-    autocmd VimEnter * :QuickScopeToggle
   augroup end
 ]])
