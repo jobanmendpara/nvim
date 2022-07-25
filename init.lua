@@ -28,5 +28,7 @@ require('user.plugins.autosave')
 require('user.plugins.surround')
 require('user.plugins.todo_comments')
 require("user.plugins.presence")
+require("user.plugins.neogit")
+require('user.plugins.navic')
 -- require "user.notify"
 -- require "user.colorizer"

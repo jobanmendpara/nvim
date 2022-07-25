@@ -77,6 +77,8 @@ return packer.startup(function(use)
     use("ur4ltz/surround.nvim")
     use("folke/todo-comments.nvim")
     use("andweeb/presence.nvim")
+    use("TimUntersberger/neogit")
+    use('SmiteshP/nvim-navic')
     -- use("rcarriga/nvim-notify")
     -- use("norcalli/nvim-colorizer.lua")
 
@@ -116,6 +118,15 @@ return packer.startup(function(use)
     use("neovim/nvim-lspconfig")
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
+    use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+      config = function()
+        local saga = require("lspsaga")
+
+        saga.init_lsp_saga()
+      end,
+    })
 
     -- Color Schemes
     use("folke/tokyonight.nvim")

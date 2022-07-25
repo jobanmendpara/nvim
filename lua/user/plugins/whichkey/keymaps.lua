@@ -13,17 +13,7 @@ local opts = {
     nowait = true -- use `nowait` when creating keymaps
 }
 
-local function lspFloatLine ()
-  vim.diagnostic.open_float({'line'})
-end
-
-local function lspNextDiagnostic ()
-  vim.diagnostic.goto_next()
-end
-
-local function lspPrevDiagnostic ()
-  vim.diagnostic.goto_prev()
-end
+local action = require('lspsaga.codeaction')
 
 local function lspShowDefinition ()
   vim.lsp.buf.definition()
@@ -39,10 +29,6 @@ end
 
 local function lspShowReferences()
   vim.lsp.buf.references()
-end
-
-local function lspShowCodeAction()
-  vim.lsp.buf.code_action()
 end
 
 local function lspRename()
@@ -63,15 +49,15 @@ local mappings = {
     W = {'<cmd>wa<cr>', 'Save All Buffers'},
     ['['] = {
       name = 'LSP',
-      c = {lspShowCodeAction, 'Show Code Actions'},
+      c = {action.code_action, 'Show Code Actions'},
       d = {lspShowDefinition, 'Show Definition'},
       D = {lspShowTypeDefinition, 'Show Type Definition'},
-      e = {lspNextDiagnostic, 'Show Next Diagnostic'},
+      e = {'<cmd>Lspsaga diagnostic_jump_next<cr>', 'Show Next Diagnostic'},
       i = {lspShowImplementation, 'Show Implementations'},
       n = {lspRename, 'Rename'},
-      q = {lspFloatLine, 'Show Line Diagnostics'},
+      q = {'<cmd>Lspsaga show_line_diagnostics<cr>', 'Show Line Diagnostics'},
       r = {lspShowReferences, 'Show References'},
-      w = {lspPrevDiagnostic, 'Show Previous Diagnostic'},
+      w = {'<cmd>Lspsaga diagnostic_jump_prev<cr>', 'Show Previous Diagnostic'},
     },
     ['/'] = {
       name = 'Hop',

@@ -32,6 +32,7 @@ local options = {
 	timeoutlen = 250, -- time to wait for a mapped sequence to complete (in ms)
 	undofile = true, -- enable persistent undo
 	updatetime = 300, -- faster completion (4000ms default)
+  winbar = "%{%v:lua.require'nvim-navic'.get_location()%}",
 	wrap = false, -- display lines as one long line
 	writebackup = false, -- if a file is being edited by another program (or was written to a file editing with another program, it is now allowed to be edited)
 }
