@@ -116,6 +116,7 @@ return packer.startup(function(use)
 
     -- LSP
     use("neovim/nvim-lspconfig")
+    use("VonHeikemen/lsp-zero.nvim")
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
     use({
