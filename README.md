@@ -2,7 +2,6 @@
 
 ripgrep
 make
-cormacrel/dark-notify
 
 # MelloVim
 MelloVim is my personal development environment (heard it from TJ DeVries and I just really dig it). My goal is to create a VS Code clone but to make it more "me".
@@ -23,5 +22,5 @@ MelloVim is my personal development environment (heard it from TJ DeVries and I 
   * Terminal with ToggleTerm
   * Fuzzy finding with Telescope
   * Syntax highlighting with Treesitter
-  * Formatting and linting with Null-ls
+  * Formatting and linting
   * Language Server Protocol with Native LSP
