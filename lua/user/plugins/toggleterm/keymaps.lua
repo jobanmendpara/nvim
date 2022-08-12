@@ -32,8 +32,3 @@ function _G.set_terminal_keymaps()
 end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-
-keymap('n', '<leader>tf', '<cmd>ToggleTerm direction=float<cr>')
-keymap('n', '<leader>th', '<cmd>ToggleTerm direction=horizontal<cr>')
-keymap('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<cr>')
-keymap('n', '<leader>tlg', _LAZYGIT_TOGGLE)
