@@ -1,7 +1,7 @@
 vim.cmd [[
 try
-	colorscheme rose-pine
+	colorscheme catppuccin
 	catch /^Vim\%((\a\+)\)\ =:E185/
-		colorscheme tokyonight
+		colorscheme rose-pine
 	endtry
 ]]

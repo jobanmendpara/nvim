@@ -61,11 +61,9 @@ local mappings = {
     },
     ['/'] = {
       name = 'Hop',
-      ['1'] = {'<cmd>HopChar1<cr>', 'Hop 1 Char'},
-      ['2'] = {'<cmd>HopChar2<cr>', 'Hop 2 Char'},
-      ['3'] = {'<cmd>HopWord<cr>', 'Hop Word'},
-      ['4'] = {'<cmd>HopLine<cr>', 'Hop Line'},
-      ['5'] = {'<cmd>HopPattern<cr>', 'Hop Pattern'},
+      ['w'] = {'<cmd>HopWord<cr>', 'Hop Word'},
+      ['l'] = {'<cmd>HopLine<cr>', 'Hop Line'},
+      ['p'] = {'<cmd>HopPattern<cr>', 'Hop Pattern'},
     },
     [','] = {
       name = 'Telescope',

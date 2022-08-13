@@ -67,7 +67,6 @@ return packer.startup(function(use)
   use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("phaazon/hop.nvim")
-  use("lewis6991/gitsigns.nvim")
   use("folke/trouble.nvim")
   use("yamatsum/nvim-cursorline")
   use("lukas-reineke/indent-blankline.nvim")
@@ -78,8 +77,13 @@ return packer.startup(function(use)
   use("andweeb/presence.nvim")
   use('SmiteshP/nvim-navic')
   use("norcalli/nvim-colorizer.lua")
-  use("kdheepak/lazygit.nvim")
+  use("zakharykaplan/nvim-retrail")
   -- use("rcarriga/nvim-notify")
+
+  -- Git
+  use("lewis6991/gitsigns.nvim")
+  use("kdheepak/lazygit.nvim")
+  use("TimUntersberger/neogit")
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
@@ -103,15 +107,15 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-cmdline")
+  use("saadparwaiz1/cmp_luasnip")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lua")
-  use("saadparwaiz1/cmp_luasnip")
+  use("hrsh7th/cmp-cmdline")
   use("lukas-reineke/cmp-rg")
 
   -- snippets
   use("L3MON4D3/LuaSnip")
-  -- use("rafamadriz/friendly-snippets")
+  use("rafamadriz/friendly-snippets")
 
   -- LSP
   use("neovim/nvim-lspconfig")
@@ -130,6 +134,7 @@ return packer.startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
 
   -- Color Schemes
+  use{ "catppuccin/nvim", as = "catppuccin"}
   use("folke/tokyonight.nvim")
   use("projekt0n/github-nvim-theme")
   use("overcache/NeoSolarized")
