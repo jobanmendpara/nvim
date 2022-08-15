@@ -91,7 +91,7 @@ lualine.setup({
             left = '',
             right = ''
         },
-        disabled_filetypes = {'alpha', 'NvimTree', 'Outline'},
+        disabled_filetypes = {'alpha', 'Outline'},
         globalstatus = false,
         icons_enabled = true,
         section_separators = {

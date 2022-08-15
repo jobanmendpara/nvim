@@ -1,4 +1,4 @@
-local status ok, neogit = pcall(require, 'neogit')
+local status_ok, neogit = pcall(require, 'neogit')
 if not status_ok then
   return
 end

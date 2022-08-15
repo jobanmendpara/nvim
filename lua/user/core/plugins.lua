@@ -78,7 +78,7 @@ return packer.startup(function(use)
   use('SmiteshP/nvim-navic')
   use("norcalli/nvim-colorizer.lua")
   use("zakharykaplan/nvim-retrail")
-  -- use("rcarriga/nvim-notify")
+  use("rcarriga/nvim-notify")
 
   -- Git
   use("lewis6991/gitsigns.nvim")

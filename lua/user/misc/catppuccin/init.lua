@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-vim.g.catppuccin_flavour = "latte"
+vim.g.catppuccin_flavour = "mocha"
 
 catppuccin.setup({
 	dim_inactive = {
@@ -12,9 +12,9 @@ catppuccin.setup({
 		percentage = 0.15,
 	},
 	transparent_background = false,
-	term_colors = false,
+	term_colors = true,
 	compile = {
-		enabled = false,
+		enabled = true,
 		path = vim.fn.stdpath "cache" .. "/catppuccin",
 	},
 	styles = {

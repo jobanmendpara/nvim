@@ -13,7 +13,7 @@ null_ls.setup {
   sources = {
     formatting.eslint,
     formatting.stylua,
-    diagnostics.eslint,
+    --[[ diagnostics.eslint, ]]
     diagnostics.shellcheck,
   },
 }

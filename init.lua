@@ -1,5 +1,4 @@
 require('user.core.keymaps')
-require('user.core.options')
 require('user.core.impatient')
 require('user.core.plugins')
 require('user.core.autocommands')
@@ -33,4 +32,5 @@ require('user.plugins.presence')
 require('user.plugins.navic')
 require('user.plugins.colorizer')
 require('user.plugins.retrail')
--- require "user.notify"
+require('user.plugins.notify')
+require('user.core.options')
