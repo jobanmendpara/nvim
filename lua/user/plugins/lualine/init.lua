@@ -92,7 +92,7 @@ lualine.setup({
             right = ''
         },
         disabled_filetypes = {'alpha', 'Outline'},
-        globalstatus = false,
+        globalstatus = true,
         icons_enabled = true,
         section_separators = {
             left = '',

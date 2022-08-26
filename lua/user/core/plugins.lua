@@ -37,116 +37,122 @@ packer.init({
 })
 
 -- Install packages here
-return packer.startup(function(use)
-  ----------------------------
-  -- Packer
-  ----------------------------
-  use("wbthomason/packer.nvim")
+return packer.startup({
+  function(use)
+    ----------------------------
+    -- Packer
+    ----------------------------
+    use("wbthomason/packer.nvim")
 
-  ----------------------------
-  -- Common Dependencies
-  ----------------------------
-  use('nvim-lua/plenary.nvim')
-  use('kyazdani42/nvim-web-devicons')
-  use('nvim-lua/popup.nvim')
+    ----------------------------
+    -- Common Dependencies
+    ----------------------------
+    use('nvim-lua/plenary.nvim')
+    use('kyazdani42/nvim-web-devicons')
+    use('nvim-lua/popup.nvim')
 
-  ----------------------------
-  -- My Plugins
-  ----------------------------
-  use("lewis6991/impatient.nvim")
-  use("Shatur/neovim-session-manager")
-  use("folke/which-key.nvim")
-  use("kyazdani42/nvim-tree.lua")
-  use("akinsho/bufferline.nvim")
-  use("moll/vim-bbye")
-  use("nvim-lualine/lualine.nvim")
-  use("karb94/neoscroll.nvim")
-  use("goolord/alpha-nvim")
-  use("akinsho/toggleterm.nvim")
-  use("ahmedkhalf/project.nvim")
-  use("numToStr/Comment.nvim")
-  use("JoosepAlviste/nvim-ts-context-commentstring")
-  use("phaazon/hop.nvim")
-  use("folke/trouble.nvim")
-  use("yamatsum/nvim-cursorline")
-  use("lukas-reineke/indent-blankline.nvim")
-  use("McAuleyPenney/tidy.nvim")
-  use("Pocco81/auto-save.nvim")
-  use("ur4ltz/surround.nvim")
-  use("folke/todo-comments.nvim")
-  use("andweeb/presence.nvim")
-  use('SmiteshP/nvim-navic')
-  use("norcalli/nvim-colorizer.lua")
-  use("zakharykaplan/nvim-retrail")
-  use("rcarriga/nvim-notify")
+    ----------------------------
+    -- My Plugins
+    ----------------------------
+    use("lewis6991/impatient.nvim")
+    use("Shatur/neovim-session-manager")
+    use("folke/which-key.nvim")
+    use("kyazdani42/nvim-tree.lua")
+    use("akinsho/bufferline.nvim")
+    use("moll/vim-bbye")
+    use("nvim-lualine/lualine.nvim")
+    use("karb94/neoscroll.nvim")
+    use("goolord/alpha-nvim")
+    use("akinsho/toggleterm.nvim")
+    use("ahmedkhalf/project.nvim")
+    use("numToStr/Comment.nvim")
+    use("JoosepAlviste/nvim-ts-context-commentstring")
+    use("phaazon/hop.nvim")
+    use("folke/trouble.nvim")
+    use("yamatsum/nvim-cursorline")
+    use("lukas-reineke/indent-blankline.nvim")
+    use("McAuleyPenney/tidy.nvim")
+    use("Pocco81/auto-save.nvim")
+    use("ur4ltz/surround.nvim")
+    use("folke/todo-comments.nvim")
+    use("andweeb/presence.nvim")
+    use('SmiteshP/nvim-navic')
+    use("norcalli/nvim-colorizer.lua")
+    use("zakharykaplan/nvim-retrail")
+    use("rcarriga/nvim-notify")
+    use("f-person/auto-dark-mode.nvim")
 
-  -- Git
-  use("lewis6991/gitsigns.nvim")
-  use("kdheepak/lazygit.nvim")
-  use("TimUntersberger/neogit")
+    -- Git
+    use("lewis6991/gitsigns.nvim")
+    use("kdheepak/lazygit.nvim")
+    use("TimUntersberger/neogit")
 
-  -- Telescope
-  use("nvim-telescope/telescope.nvim")
-  use("nvim-telescope/telescope-media-files.nvim")
-  use('nvim-telescope/telescope-symbols.nvim')
-  use({
-    'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'make'
-  })
+    -- Telescope
+    use("nvim-telescope/telescope.nvim")
+    use("nvim-telescope/telescope-media-files.nvim")
+    use('nvim-telescope/telescope-symbols.nvim')
+    use({
+      'nvim-telescope/telescope-fzf-native.nvim',
+      run = 'make'
+    })
 
-  -- Treesitter
-  use({
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  })
-  use('windwp/nvim-autopairs')
-  use('windwp/nvim-ts-autotag')
-  use("p00f/nvim-ts-rainbow")
+    -- Treesitter
+    use({
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+    })
+    use('windwp/nvim-autopairs')
+    use('windwp/nvim-ts-autotag')
+    use("p00f/nvim-ts-rainbow")
 
-  -- cmp plugins
-  use("hrsh7th/nvim-cmp")
-  use("hrsh7th/cmp-buffer")
-  use("hrsh7th/cmp-path")
-  use("saadparwaiz1/cmp_luasnip")
-  use("hrsh7th/cmp-nvim-lsp")
-  use("hrsh7th/cmp-nvim-lua")
-  use("hrsh7th/cmp-cmdline")
-  use("lukas-reineke/cmp-rg")
+    -- cmp plugins
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    use("saadparwaiz1/cmp_luasnip")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-nvim-lua")
+    use("hrsh7th/cmp-cmdline")
+    use("lukas-reineke/cmp-rg")
 
-  -- snippets
-  use("L3MON4D3/LuaSnip")
-  use("rafamadriz/friendly-snippets")
+    -- snippets
+    use("L3MON4D3/LuaSnip")
+    use("rafamadriz/friendly-snippets")
 
-  -- LSP
-  use("neovim/nvim-lspconfig")
-  use("VonHeikemen/lsp-zero.nvim")
-  use("williamboman/mason.nvim")
-  use("williamboman/mason-lspconfig.nvim")
-  use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-      local saga = require("lspsaga")
+    -- LSP
+    use("neovim/nvim-lspconfig")
+    use("VonHeikemen/lsp-zero.nvim")
+    use("williamboman/mason.nvim")
+    use("williamboman/mason-lspconfig.nvim")
+    use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+      config = function()
+        local saga = require("lspsaga")
 
-      saga.init_lsp_saga()
-    end,
-  })
-  use('jose-elias-alvarez/null-ls.nvim')
+        saga.init_lsp_saga()
+      end,
+    })
+    use('jose-elias-alvarez/null-ls.nvim')
 
-  -- Color Schemes
-  use{ "catppuccin/nvim", as = "catppuccin"}
-  use("folke/tokyonight.nvim")
-  use("projekt0n/github-nvim-theme")
-  use("overcache/NeoSolarized")
-  use("sainnhe/sonokai")
-  use("sainnhe/gruvbox-material")
-  use("sainnhe/everforest")
-  use("sainnhe/edge")
-  use("rmehri01/onenord.nvim")
-  use("ChristianChiarulli/nvcode-color-schemes.vim")
-  use("rose-pine/neovim")
+    -- Color Schemes
+    use{ "catppuccin/nvim", as = "catppuccin"}
+    use("folke/tokyonight.nvim")
+    use("projekt0n/github-nvim-theme")
+    use("overcache/NeoSolarized")
+    use("sainnhe/sonokai")
+    use("sainnhe/gruvbox-material")
+    use("sainnhe/everforest")
+    use("sainnhe/edge")
+    use("rmehri01/onenord.nvim")
+    use("ChristianChiarulli/nvcode-color-schemes.vim")
+    use("rose-pine/neovim")
 
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
-end)
+    if PACKER_BOOTSTRAP then
+      require("packer").sync()
+    end
+  end,
+  config = {
+    max_jobs = 10,
+  }
+})
