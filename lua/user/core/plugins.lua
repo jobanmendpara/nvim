@@ -124,19 +124,10 @@ return packer.startup({
     use("VonHeikemen/lsp-zero.nvim")
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
-    use({
-      "glepnir/lspsaga.nvim",
-      branch = "main",
-      config = function()
-        local saga = require("lspsaga")
-
-        saga.init_lsp_saga()
-      end,
-    })
     use('jose-elias-alvarez/null-ls.nvim')
 
     -- Color Schemes
-    use{ "catppuccin/nvim", as = "catppuccin"}
+    use({ "catppuccin/nvim", as = "catppuccin"})
     use("folke/tokyonight.nvim")
     use("projekt0n/github-nvim-theme")
     use("overcache/NeoSolarized")

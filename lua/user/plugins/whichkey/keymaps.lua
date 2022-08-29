@@ -13,9 +13,11 @@ local opts = {
     nowait = true -- use `nowait` when creating keymaps
 }
 
-local action = require('lspsaga.codeaction')
+local function lspShowCodeActions()
+  vim.lsp.buf.code_action()
+end
 
-local function lspShowDefinition ()
+local function lspShowDefinition()
   vim.lsp.buf.definition()
 end
 
@@ -45,19 +47,17 @@ local mappings = {
     s = {'<cmd>vsplit<cr>', 'Vertical Split'},
     S = {'<cmd>hsplit<cr>', 'Horizontal Split'},
     t = {'<cmd>ToggleTerm<cr>', 'Toggle Terminal'},
+    v = {'<cmd>Neogit<cr>', 'Neogit'},
     w = {'<cmd>w<cr>', 'Save Buffer'},
     W = {'<cmd>wa<cr>', 'Save All Buffers'},
     ['['] = {
       name = 'LSP',
-      c = {action.code_action, 'Show Code Actions'},
+      c = {lspShowCodeActions, 'Show Code Actions'},
       d = {lspShowDefinition, 'Show Definition'},
       D = {lspShowTypeDefinition, 'Show Type Definition'},
-      e = {'<cmd>Lspsaga diagnostic_jump_next<cr>', 'Show Next Diagnostic'},
       i = {lspShowImplementation, 'Show Implementations'},
       n = {lspRename, 'Rename'},
-      q = {'<cmd>Lspsaga show_line_diagnostics<cr>', 'Show Line Diagnostics'},
       r = {lspShowReferences, 'Show References'},
-      w = {'<cmd>Lspsaga diagnostic_jump_prev<cr>', 'Show Previous Diagnostic'},
     },
     ['/'] = {
       name = 'Hop',
