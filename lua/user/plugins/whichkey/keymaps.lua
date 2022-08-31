@@ -48,6 +48,7 @@ local mappings = {
     S = {'<cmd>hsplit<cr>', 'Horizontal Split'},
     t = {'<cmd>ToggleTerm<cr>', 'Toggle Terminal'},
     v = {'<cmd>Neogit<cr>', 'Neogit'},
+    V = {'<cmd>LazyGit<cr>', 'LazyGit'},
     w = {'<cmd>w<cr>', 'Save Buffer'},
     W = {'<cmd>wa<cr>', 'Save All Buffers'},
     ['['] = {
