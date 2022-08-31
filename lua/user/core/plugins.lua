@@ -82,6 +82,7 @@ return packer.startup({
     use("rcarriga/nvim-notify")
     use("f-person/auto-dark-mode.nvim")
     use("j-hui/fidget.nvim")
+    use("gbprod/cutlass.nvim")
 
     -- Git
     use("lewis6991/gitsigns.nvim")
