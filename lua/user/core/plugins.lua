@@ -69,7 +69,6 @@ return packer.startup({
     use("JoosepAlviste/nvim-ts-context-commentstring")
     use("phaazon/hop.nvim")
     use("folke/trouble.nvim")
-    use("yamatsum/nvim-cursorline")
     use("lukas-reineke/indent-blankline.nvim")
     use("McAuleyPenney/tidy.nvim")
     use("Pocco81/auto-save.nvim")
@@ -106,6 +105,7 @@ return packer.startup({
     use('windwp/nvim-autopairs')
     use('windwp/nvim-ts-autotag')
     use("p00f/nvim-ts-rainbow")
+    use("simrat39/symbols-outline.nvim")
 
     -- cmp plugins
     use("hrsh7th/nvim-cmp")
