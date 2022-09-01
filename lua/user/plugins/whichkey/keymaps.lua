@@ -43,6 +43,7 @@ local mappings = {
     e = {'<cmd>NvimTreeToggle<cr>', 'Toggle Explorer'},
     f = {builtins.current_buffer_fuzzy_find, 'Current Buffer Fuzzy Finder'},
     F = {builtins.live_grep, 'Find in Project'},
+    o = {'<cmd>SymbolsOutline<cr>', 'SymbolsOutline'},
     p = {'<cmd>TroubleToggle<cr>', 'Toggle Problems'},
     s = {'<cmd>vsplit<cr>', 'Vertical Split'},
     S = {'<cmd>hsplit<cr>', 'Horizontal Split'},
