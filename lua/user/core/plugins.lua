@@ -85,6 +85,7 @@ return packer.startup({
     use("lalitmee/browse.nvim")
     use("ldelossa/litee.nvim")
     use("ldelossa/gh.nvim")
+    use("phaazon/mind.nvim")
 
     -- Git
     use("lewis6991/gitsigns.nvim")
