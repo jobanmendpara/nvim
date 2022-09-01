@@ -13,34 +13,11 @@ local opts = {
     nowait = true -- use `nowait` when creating keymaps
 }
 
-local function lspShowCodeActions()
-  vim.lsp.buf.code_action()
-end
-
-local function lspShowDefinition()
-  vim.lsp.buf.definition()
-end
-
-local function lspShowTypeDefinition()
-  vim.lsp.buf.type_definition()
-end
-
-local function lspShowImplementation()
-  vim.lsp.buf.implementation()
-end
-
-local function lspShowReferences()
-  vim.lsp.buf.references()
-end
-
-local function lspRename()
-  vim.lsp.buf.rename()
-end
-
 local mappings = {
   space_mappings = {
     c = {'<cmd>Bdelete!<cr>', 'Close Buffer'},
     e = {'<cmd>NvimTreeToggle<cr>', 'Toggle Explorer'},
+    E = {'<cmd>NvimTreeFindFile<cr>', 'Find Current File'},
     f = {builtins.current_buffer_fuzzy_find, 'Current Buffer Fuzzy Finder'},
     F = {builtins.live_grep, 'Find in Project'},
     o = {'<cmd>SymbolsOutline<cr>', 'SymbolsOutline'},
@@ -54,12 +31,12 @@ local mappings = {
     W = {'<cmd>wa<cr>', 'Save All Buffers'},
     ['['] = {
       name = 'LSP',
-      c = {lspShowCodeActions, 'Show Code Actions'},
-      d = {lspShowDefinition, 'Show Definition'},
-      D = {lspShowTypeDefinition, 'Show Type Definition'},
-      i = {lspShowImplementation, 'Show Implementations'},
-      n = {lspRename, 'Rename'},
-      r = {lspShowReferences, 'Show References'},
+      c = {vim.lsp.buf.code_action, 'Show Code Actions'},
+      d = {vim.lsp.buf.definition, 'Show Definition'},
+      D = {vim.lsp.buf.type_definition, 'Show Type Definition'},
+      i = {vim.lsp.buf.implementation, 'Show Implementations'},
+      n = {vim.lsp.buf.rename, 'Rename'},
+      r = {vim.lsp.buf.references, 'Show References'},
     },
     ['/'] = {
       name = 'Hop',
@@ -70,6 +47,7 @@ local mappings = {
     [','] = {
       name = 'Telescope',
       b = {builtins.buffers, 'Buffers'},
+      B = {'<cmd>Browse<cr>', 'Browse'},
       c = {builtins.colorscheme, 'Colorschemes'},
       f = {builtins.find_files, 'Files'},
       F = {builtins.oldfiles, 'Recent Files'},
