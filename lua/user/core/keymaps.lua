@@ -32,8 +32,12 @@ keymap('n', '<C-Left>', ':vertical resize -2<CR>')
 keymap('n', '<C-Right>', ':vertical resize +2<CR>')
 
 -- Navigate buffers
-keymap('n', '<S-l>', ':bnext<CR>')
-keymap('n', '<S-h>', ':bprevious<CR>')
+keymap('n', '<S-l>', ':BufferLineCycleNext<CR>')
+keymap('n', '<S-h>', ':BufferLineCyclePrev<CR>')
+
+-- Move buffers
+keymap('n', '<CS-l>', ':BufferLineMoveNext<CR>')
+keymap('n', '<CS-h>', ':BufferLineMovePrev<CR>')
 
 -- Move text up and down
 keymap('n', '<A-j>', '<Esc>:m .+1<CR>==gi')
@@ -81,7 +85,7 @@ end)
 
 -- Save Buffer
 keymap('n', '<leader>w', '<cmd>w<cr>')
--- Quit Window?
+-- Quit /Window?
 keymap('n', '<leader>q', '<cmd>q<cr>')
 -- Quit All
 keymap('n', '<leader>-', '<cmd>qa<cr>')

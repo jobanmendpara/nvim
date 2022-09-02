@@ -8,5 +8,11 @@ if not gh_status_ok then
 end
 
 lib.setup()
-gh.setup()
+gh.setup({
+  keymaps = {
+    open = '<cr>',
+    expand = 'zo',
+    collapse = 'zc',
+  }
+})
 
