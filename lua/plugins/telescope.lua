@@ -16,7 +16,7 @@ return {
     return {
       pickers = {
         find_files = {
-          hidden = false,
+          hidden = true,
         },
         live_grep = {
           additional_args = function(opts)
@@ -75,6 +75,7 @@ return {
       },
       extensions = {
         file_browser = {
+          hidden = true,
           -- disables netrw and use telescope-file-browser in its place
           hijack_netrw = true,
           mappings = {
