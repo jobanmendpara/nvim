@@ -16,13 +16,13 @@ M.mason_packages = {
     "shfmt",
     "stylua",
     "tailwindcss-language-server",
-    "typescript-language-server",
+    "ts_ls",
     "yaml-language-server",
     "editorconfig-checker",
 }
 
 M.lsp_servers = {
-    "tsserver",
+    "ts_ls",
     "lua_ls",
     "eslint",
     "bashls",

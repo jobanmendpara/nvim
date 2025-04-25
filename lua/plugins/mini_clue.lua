@@ -33,7 +33,6 @@ local M = {
         { mode = 'n', keys = '<leader>,',  desc = 'Preferences' },
         { mode = 'n', keys = '<leader>f',  desc = 'Find' },
         { mode = 'n', keys = '<leader>c',  desc = 'Chat' },
-        { mode = 'n', keys = '<leader>j',  desc = 'Jump' },
         { mode = 'n', keys = '<leader>l',  desc = 'LSP' },
         { mode = 'n', keys = '<leader>m',  desc = 'Move' },
         { mode = 'n', keys = '<leader>s',  desc = 'Surround' },

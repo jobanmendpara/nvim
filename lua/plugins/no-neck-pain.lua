@@ -3,6 +3,7 @@ local M = {
   "shortcuts/no-neck-pain.nvim",
   event = "VeryLazy",
   version = "*",
+  enabled = true,
   config = function()
     require("no-neck-pain").setup({
       autocmds = {
@@ -14,7 +15,7 @@ local M = {
     })
   end,
   keys = {
-    { "<M-c>", cmd('NoNeckPain'), desc = "Center Window"}
+    { "<leader>wc", cmd('NoNeckPain'), desc = "Center Window" }
   }
 }
 

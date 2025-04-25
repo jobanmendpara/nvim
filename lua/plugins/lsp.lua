@@ -52,11 +52,6 @@ local M = {
       lsp_zero.extend_lspconfig()
       require('mason-lspconfig').setup({
         ensure_installed = {
-          'eslint',
-          'lua_ls',
-          'tsserver',
-          'tailwindcss',
-          'volar',
         },
         handlers = {
           lsp_zero.default_setup,
@@ -70,8 +65,8 @@ local M = {
               filetypes = { 'typescript', 'javascript' },
             })
           end,
-          tsserver = function()
-            nvim_lsp.tsserver.setup({
+          ts_ls = function()
+            nvim_lsp.ts_ls.setup({
               root_dir = nvim_lsp.util.root_pattern("package.json", "tsconfig.json"),
               single_file_support = false,
               handlers = {
@@ -85,13 +80,13 @@ local M = {
                     return
                   end
 
-                  -- ignore some tsserver diagnostics
+                  -- ignore some ts_ls diagnostics
                   local idx = 1
                   while idx <= #result.diagnostics do
                     local entry = result.diagnostics[idx]
 
-                    local formatter = require('format-ts-errors')[entry.code]
-                    entry.message = formatter and formatter(entry.message) or entry.message
+                    -- local formatter = require('format-ts-errors')[entry.code]
+                    -- entry.message = formatter and formatter(entry.message) or entry.message
 
                     -- codes: https://github.com/microsoft/TypeScript/blob/main/src/compiler/diagnosticMessages.json
                     if entry.code == 80001 then

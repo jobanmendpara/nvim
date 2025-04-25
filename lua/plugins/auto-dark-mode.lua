@@ -13,7 +13,7 @@ local M = {
       end,
       set_light_mode = function()
         vim.api.nvim_set_option('background', 'light')
-        vim.cmd('colorscheme catppuccin-frappe')
+        vim.cmd('colorscheme catppuccin-latte')
       end,
     })
     auto_dark_mode.init()
