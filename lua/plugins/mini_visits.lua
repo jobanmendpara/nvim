@@ -1,53 +1,37 @@
-local cmd = require('utils').cmd
-
 local M = {
   "echasnovski/mini.visits",
   event = "VeryLazy",
   config = function()
     require("mini.visits").setup({
-      track = {
-        event = '',
-      }
+      track = { event = "" },
     })
   end,
-  keys = function()
-    local mini_visits = require("mini.visits")
-
-    local function toggleFileMark()
-      local winId = vim.api.nvim_get_current_win()
-      local bufId = vim.api.nvim_win_get_buf(winId)
-      local currentBufferPath = vim.api.nvim_buf_get_name(bufId)
-
-      local list = mini_visits.list_paths()
-      local existsInList = false
-
-      for _, path in ipairs(list) do
-        if currentBufferPath == path then
-          existsInList = true
-          break
+  keys = {
+    {
+      ">",
+      function()
+        local mini = require("mini.visits")
+        local buf = vim.api.nvim_get_current_buf()
+        local path = vim.api.nvim_buf_get_name(buf)
+        local exists = false
+        for _, p in ipairs(mini.list_paths()) do
+          if p == path then
+            exists = true; break
+          end
         end
-      end
-
-      if existsInList then
-        vim.notify("Unmark File")
-        mini_visits.remove_path()
-      else
-        vim.notify("Mark File")
-        return mini_visits.register_visit()
-      end
-    end
-
-    return {
-      { ">",              function() toggleFileMark() end,                                       desc = "Mark File" },
-      { "<leader>>",      cmd("lua MiniVisits.add_label()"),                                     desc = "Add Label" },
-      { "<leader><",      cmd("lua MiniVisits.remove_label()"),                                  desc = "Remove Label" },
-      { "[v",             cmd("lua MiniVisits.iterate_paths('backward', nil, { wrap = true })"), desc = "Cycle Paths Backward" },
-      { "<M-h>",          cmd("lua MiniVisits.iterate_paths('backward', nil, { wrap = true })"), desc = "Cycle Paths Backward" },
-      { "]v",             cmd("lua MiniVisits.iterate_paths('forward', nil, { wrap = true })"),  desc = "Cycle Paths Forward" },
-      { "<M-l>",          cmd("lua MiniVisits.iterate_paths('forward', nil, { wrap = true })"),  desc = "Cycle Paths Forward" },
-      { "<leader><M-BS>", cmd("lua MiniVisits.select_label()"),                                  desc = "View Labels" },
-    }
-  end,
+        if exists then
+          vim.notify("Unmark File")
+          mini.remove_path()
+        else
+          vim.notify("Mark File")
+          mini.register_visit()
+        end
+      end,
+      desc = "Mark/Unmark file",
+      mode = "n",
+      silent = true,
+    },
+  },
 }
 
 return M

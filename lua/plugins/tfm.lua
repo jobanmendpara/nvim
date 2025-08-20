@@ -1,7 +1,7 @@
 local M = {
   "rolv-apneseth/tfm.nvim",
   event = "VeryLazy",
-  enabled=true,
+  enabled = true,
   opts = {
     file_manager = "yazi",
     replace_netrw = true,
@@ -24,7 +24,7 @@ local M = {
     {
       "<leader>e",
       ":Tfm<CR>",
-      desc = "TFM",
+      desc = "Open Explorer",
     },
   },
 }

@@ -1,7 +1,7 @@
 local M = {
   "nvimtools/none-ls.nvim",
   event = "VeryLazy",
-  enabled = true,
+  enabled = false,
   config = function()
     local null_ls = require("null-ls")
     local formatters = null_ls.builtins.formatting
