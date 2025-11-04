@@ -14,4 +14,20 @@ return {
       },
     },
   },
+  keys = {
+    {
+      "[",
+      function()
+        require("which-key").show({ keys = "[", loop = true })
+      end,
+      desc = "Previous",
+    },
+    {
+      "]",
+      function()
+        require("which-key").show({ keys = "]", loop = true })
+      end,
+      desc = "Next",
+    },
+  },
 }
