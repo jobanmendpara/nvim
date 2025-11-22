@@ -14,5 +14,3 @@ map({ "n", "v" }, "<leader>Y", exec("%y+"), { desc = "Yank Buffer to System Clip
 map({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank Selection to System Clipboard" })
 
 map("x", "p", '"_dP')
-
-map("n", "<leader>,q", exec("xa"), { desc = "Save All and Quit" })
